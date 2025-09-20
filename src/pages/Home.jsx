@@ -564,11 +564,11 @@ const Home = () => {
           </div>
 
           <div className="banner_2 mt-12">
-            <div className="wrapper d-flex align-items-center opacity-mask bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl p-8 text-white" data-opacity-mask="rgba(0, 0, 0, 0.3)" style={{backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
-              <div>
-                <h3 className="text-3xl font-bold mb-2">Your Perfect<br />Tour Experience</h3>
-                <p className="text-xl mb-6">Activities and accommodations</p>
-                <a href="all_tours_list.html" className="btn_1 bg-white text-amber-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg inline-block transition">Read more</a>
+            <div className="wrapper d-flex align-items-center opacity-mask bg-gradient-to-r from-amber-600 to-amber-700 rounded-2xl p-8 md:p-12 text-white shadow-xl" data-opacity-mask="rgba(0, 0, 0, 0.3)" style={{backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
+              <div className="max-w-2xl">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">Your Perfect<br />Tour Experience</h3>
+                <p className="text-lg md:text-xl mb-8 opacity-90">Experience the rich history, stunning landscapes, and warm hospitality of Afghanistan with our expertly crafted tours and accommodations.</p>
+                <a href="all_tours_list.html" className="btn_1 bg-white text-black rounded hover:bg-amber-50 font-bold py-3 px-8 rounded-lg inline-block transition duration-300 transform hover:-translate-y-1 shadow-lg">Discover More</a>
               </div>
             </div>
           </div>
