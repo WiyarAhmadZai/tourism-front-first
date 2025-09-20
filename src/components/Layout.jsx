@@ -1,48 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Layout = ({ children }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
+      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-amber-600 shadow-md py-2' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-amber-600">
+              <h1 className={`text-2xl font-bold transition-colors duration-300 ${isScrolled ? 'text-white' : 'text-white'}`}>
                 <a href="/">Afghanistan Tourism</a>
               </h1>
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-amber-600 font-bold">Home</a>
-              <a href="/tours" className="text-gray-600 hover:text-amber-600 transition">Tours</a>
-              <a href="/hotels" className="text-gray-600 hover:text-amber-600 transition">Hotels</a>
-              <a href="/transfers" className="text-gray-600 hover:text-amber-600 transition">Transfers</a>
-              <a href="/restaurants" className="text-gray-600 hover:text-amber-600 transition">Restaurants</a>
-              <a href="/about" className="text-gray-600 hover:text-amber-600 transition">About</a>
-              <a href="/contact" className="text-gray-600 hover:text-amber-600 transition">Contact</a>
+              <a href="/" className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Home</a>
+              <a href="/tours" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Tours</a>
+              <a href="/hotels" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Hotels</a>
+              <a href="/transfers" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Transfers</a>
+              <a href="/restaurants" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Restaurants</a>
+              <a href="/about" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>About</a>
+              <a href="/contact" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Contact</a>
             </nav>
             
             {/* User Actions */}
             <div className="flex items-center space-x-4">
-              <a href="/search" className="text-gray-600 hover:text-amber-600 transition">
+              <a href="/search" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </a>
-              <a href="/wishlist" className="text-gray-600 hover:text-amber-600 transition">
+              <a href="/wishlist" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </a>
-              <a href="/cart" className="text-gray-600 hover:text-amber-600 transition relative">
+              <a href="/cart" className={`transition-colors duration-300 relative ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
-                <span className="absolute -top-2 -right-2 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                <span className={`absolute -top-2 -right-2 text-xs rounded-full h-5 w-5 flex items-center justify-center ${isScrolled ? 'bg-white text-amber-600' : 'bg-white text-amber-600'}`}>3</span>
               </a>
-              <a href="/login" className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg transition">
+              <a href="/login" className={`px-4 py-2 rounded-lg transition-all duration-300 ${isScrolled ? 'bg-white text-amber-600 hover:bg-amber-100' : 'bg-white text-amber-600 hover:bg-amber-100'}`}>
                 Sign In
               </a>
             </div>
@@ -51,7 +66,7 @@ const Layout = ({ children }) => {
       </header>
       
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow pt-20">
         {children}
       </main>
       
@@ -82,7 +97,7 @@ const Layout = ({ children }) => {
               <ul className="space-y-2">
                 <li><a href="tel:+93234567890" className="text-gray-300 hover:text-white transition flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2H5a2 2 0 01-2 2V5z" />
                   </svg>
                   +93 23 456 7890
                 </a></li>
