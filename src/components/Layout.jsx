@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-amber-600 shadow-md py-2' : 'bg-transparent py-4'}`}>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-amber-600 shadow-lg py-3' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -30,34 +30,34 @@ const Layout = ({ children }) => {
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Home</a>
-              <a href="/tours" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Tours</a>
-              <a href="/hotels" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Hotels</a>
-              <a href="/transfers" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Transfers</a>
-              <a href="/restaurants" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Restaurants</a>
-              <a href="/about" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>About</a>
-              <a href="/contact" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>Contact</a>
+              <a href="/" className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Home</a>
+              <a href="/tours" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Tours</a>
+              <a href="/hotels" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Hotels</a>
+              <a href="/transfers" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Transfers</a>
+              <a href="/restaurants" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Restaurants</a>
+              <a href="/about" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>About</a>
+              <a href="/contact" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>Contact</a>
             </nav>
             
             {/* User Actions */}
             <div className="flex items-center space-x-4">
-              <a href="/search" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
+              <a href="/search" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </a>
-              <a href="/wishlist" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
+              <a href="/wishlist" className={`transition-colors duration-300 ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </a>
-              <a href="/cart" className={`transition-colors duration-300 relative ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-300'}`}>
+              <a href="/cart" className={`transition-colors duration-300 relative ${isScrolled ? 'text-white hover:text-amber-100' : 'text-white hover:text-amber-200'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
                 <span className={`absolute -top-2 -right-2 text-xs rounded-full h-5 w-5 flex items-center justify-center ${isScrolled ? 'bg-white text-amber-600' : 'bg-white text-amber-600'}`}>3</span>
               </a>
-              <a href="/login" className={`px-4 py-2 rounded-lg transition-all duration-300 ${isScrolled ? 'bg-white text-amber-600 hover:bg-amber-100' : 'bg-white text-amber-600 hover:bg-amber-100'}`}>
+              <a href="/login" className={`px-4 py-2 rounded-lg transition-all duration-300 ${isScrolled ? 'bg-white text-amber-600 hover:bg-amber-100 font-medium' : 'bg-white text-amber-600 hover:bg-amber-100 font-medium'}`}>
                 Sign In
               </a>
             </div>
