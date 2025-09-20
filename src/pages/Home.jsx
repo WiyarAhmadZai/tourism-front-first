@@ -576,96 +576,128 @@ const Home = () => {
       </div>
 
       <div className="margin_60">
-        <div className="main_title text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800">Latest <span className="text-amber-600">Blog</span> News</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+        <div className="main_title text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Latest <span className="text-amber-600">Blog</span> News</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mt-6 text-lg">
             Discover stories, tips, and insights about traveling in Afghanistan
           </p>
         </div>
 
-        <div className="row">
-          <div className="col-lg-6 mb-6">
-            <a className="box_news block bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" href="blog.html">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="group">
+            <a className="box_news block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" href="blog.html">
               <figure className="relative">
                 <img src="/src/assets/img/news_home_1.jpg" alt="" className="w-full h-64 object-cover" />
-                <figcaption className="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-lg">
-                  <strong>28</strong>Dec
+                <figcaption className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-lg font-bold text-center">
+                  <strong>28</strong> Dec
                 </figcaption>
               </figure>
-              <div className="p-6">
-                <ul className="flex items-center text-gray-500 text-sm mb-3">
+              <div className="p-8">
+                <ul className="flex items-center text-gray-500 text-sm mb-4">
                   <li>Mark Twain</li>
                   <li className="mx-2">•</li>
                   <li>20.11.2017</li>
                 </ul>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Pri oportere scribentur eu</h4>
-                <p className="text-gray-600">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">Pri oportere scribentur eu</h4>
+                <p className="text-gray-600 leading-relaxed">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <div className="mt-6">
+                  <span className="text-amber-600 font-bold inline-flex items-center group-hover:translate-x-1 transition-transform">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </a>
           </div>
-          <div className="col-lg-6 mb-6">
-            <a className="box_news block bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" href="blog.html">
+          <div className="group">
+            <a className="box_news block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" href="blog.html">
               <figure className="relative">
                 <img src="/src/assets/img/news_home_2.jpg" alt="" className="w-full h-64 object-cover" />
-                <figcaption className="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-lg">
-                  <strong>28</strong>Dec
+                <figcaption className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-lg font-bold text-center">
+                  <strong>28</strong> Dec
                 </figcaption>
               </figure>
-              <div className="p-6">
-                <ul className="flex items-center text-gray-500 text-sm mb-3">
+              <div className="p-8">
+                <ul className="flex items-center text-gray-500 text-sm mb-4">
                   <li>Jhon Doe</li>
                   <li className="mx-2">•</li>
                   <li>20.11.2017</li>
                 </ul>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Duo eius postea suscipit ad</h4>
-                <p className="text-gray-600">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">Duo eius postea suscipit ad</h4>
+                <p className="text-gray-600 leading-relaxed">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <div className="mt-6">
+                  <span className="text-amber-600 font-bold inline-flex items-center group-hover:translate-x-1 transition-transform">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </a>
           </div>
-          <div className="col-lg-6 mb-6">
-            <a className="box_news block bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" href="blog.html">
+          <div className="group">
+            <a className="box_news block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" href="blog.html">
               <figure className="relative">
                 <img src="/src/assets/img/news_home_3.jpg" alt="" className="w-full h-64 object-cover" />
-                <figcaption className="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-lg">
-                  <strong>28</strong>Dec
+                <figcaption className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-lg font-bold text-center">
+                  <strong>28</strong> Dec
                 </figcaption>
               </figure>
-              <div className="p-6">
-                <ul className="flex items-center text-gray-500 text-sm mb-3">
+              <div className="p-8">
+                <ul className="flex items-center text-gray-500 text-sm mb-4">
                   <li>Luca Robinson</li>
                   <li className="mx-2">•</li>
                   <li>20.11.2017</li>
                 </ul>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Elitr mandamus cu has</h4>
-                <p className="text-gray-600">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">Elitr mandamus cu has</h4>
+                <p className="text-gray-600 leading-relaxed">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <div className="mt-6">
+                  <span className="text-amber-600 font-bold inline-flex items-center group-hover:translate-x-1 transition-transform">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </a>
           </div>
-          <div className="col-lg-6 mb-6">
-            <a className="box_news block bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" href="blog.html">
+          <div className="group">
+            <a className="box_news block bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2" href="blog.html">
               <figure className="relative">
                 <img src="/src/assets/img/news_home_4.jpg" alt="" className="w-full h-64 object-cover" />
-                <figcaption className="absolute top-4 left-4 bg-amber-600 text-white px-3 py-1 rounded-lg">
-                  <strong>28</strong>Dec
+                <figcaption className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white px-4 py-2 rounded-lg font-bold text-center">
+                  <strong>28</strong> Dec
                 </figcaption>
               </figure>
-              <div className="p-6">
-                <ul className="flex items-center text-gray-500 text-sm mb-3">
+              <div className="p-8">
+                <ul className="flex items-center text-gray-500 text-sm mb-4">
                   <li>Paula Rodrigez</li>
                   <li className="mx-2">•</li>
                   <li>20.11.2017</li>
                 </ul>
-                <h4 className="text-xl font-bold text-gray-800 mb-3">Id est adhuc ignota delenit</h4>
-                <p className="text-gray-600">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-amber-600 transition-colors">Id est adhuc ignota delenit</h4>
+                <p className="text-gray-600 leading-relaxed">Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                <div className="mt-6">
+                  <span className="text-amber-600 font-bold inline-flex items-center group-hover:translate-x-1 transition-transform">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               </div>
             </a>
           </div>
         </div>
-        <p className="btn_home_align text-center">
-          <a href="blog.html" className="btn_1 rounded bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition">View all news</a>
+        <p className="btn_home_align text-center mt-12">
+          <a href="blog.html" className="btn_1 rounded bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg inline-block transition duration-300 transform hover:-translate-y-1 shadow-lg">View all news</a>
         </p>
       </div>
-      </div>
+    </div>
     </Layout>
   );
 };
