@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+// Import the CSS files
+import '../assets/css/style.css';
+import '../assets/css/home.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +11,7 @@ const Home = () => {
   const slides = [
     {
       id: 1,
-      image: "/images/slides/slide_home_3.jpg",
+      image: "/src/assets/img/slides/slide_home_3.jpg",
       title: "Discover Afghanistan's Hidden Treasures",
       subtitle: "Experience the rich history, stunning landscapes, and warm hospitality of Afghanistan",
       cta1: "Explore Tours",
@@ -16,7 +19,7 @@ const Home = () => {
     },
     {
       id: 2,
-      image: "/images/slides/slide_home_2.jpg",
+      image: "/src/assets/img/slides/slide_home_2.jpg",
       title: "Breathtaking Mountain Landscapes",
       subtitle: "Journey through the majestic Hindu Kush mountains and pristine valleys",
       cta1: "Book Adventure",
@@ -24,7 +27,7 @@ const Home = () => {
     },
     {
       id: 3,
-      image: "/images/slides/slide_home_1.jpg",
+      image: "/src/assets/img/slides/slide_home_1.jpg",
       title: "Ancient Cultural Heritage",
       subtitle: "Explore millennia-old monuments and experience authentic Afghan culture",
       cta1: "Start Journey",
@@ -66,14 +69,12 @@ const Home = () => {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
-                <div className="container">
+                <div className="container mx-auto px-4">
                   <div className="row justify-content-center justify-content-md-start">
                     <div className="col-lg-8 static">
                       <div className="slide-text white">
                         <h2 className="owl-slide-animated owl-slide-title text-4xl md:text-5xl font-bold text-white mb-4">
-                          {slide.title.split('<br />').map((line, i) => (
-                            <span key={i} className="block">{line}</span>
-                          ))}
+                          {slide.title}
                         </h2>
                         <p className="owl-slide-animated owl-slide-subtitle text-xl text-white mb-6">
                           {slide.subtitle}
@@ -136,7 +137,7 @@ const Home = () => {
         <div id="icon_drag_mobile"></div>
       </div>
 
-      <div className="container">
+      <div className="container mx-auto px-4">
         <div className="white_bg">
         <div className="margin_60">
           <div className="row small-gutters categories_grid">
